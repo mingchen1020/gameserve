@@ -50,3 +50,5 @@ server.post("/postscore", (req, res) => {
 });
 
 server.listen(80);
+
+0
