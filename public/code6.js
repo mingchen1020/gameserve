@@ -3,63 +3,50 @@ gdjs.GAME_32OVERCode.localVariables = [];
 gdjs.GAME_32OVERCode.GDEND_9595BGObjects1= [];
 gdjs.GAME_32OVERCode.GDEND_9595BGObjects2= [];
 gdjs.GAME_32OVERCode.GDEND_9595BGObjects3= [];
+gdjs.GAME_32OVERCode.GDEND_9595BGObjects4= [];
 gdjs.GAME_32OVERCode.GDBACKObjects1= [];
 gdjs.GAME_32OVERCode.GDBACKObjects2= [];
 gdjs.GAME_32OVERCode.GDBACKObjects3= [];
+gdjs.GAME_32OVERCode.GDBACKObjects4= [];
 gdjs.GAME_32OVERCode.GDGAMEOVERObjects1= [];
 gdjs.GAME_32OVERCode.GDGAMEOVERObjects2= [];
 gdjs.GAME_32OVERCode.GDGAMEOVERObjects3= [];
+gdjs.GAME_32OVERCode.GDGAMEOVERObjects4= [];
 gdjs.GAME_32OVERCode.GDNewTextObjects1= [];
 gdjs.GAME_32OVERCode.GDNewTextObjects2= [];
 gdjs.GAME_32OVERCode.GDNewTextObjects3= [];
+gdjs.GAME_32OVERCode.GDNewTextObjects4= [];
 gdjs.GAME_32OVERCode.GDyourscoreObjects1= [];
 gdjs.GAME_32OVERCode.GDyourscoreObjects2= [];
 gdjs.GAME_32OVERCode.GDyourscoreObjects3= [];
+gdjs.GAME_32OVERCode.GDyourscoreObjects4= [];
 gdjs.GAME_32OVERCode.GDinputnameObjects1= [];
 gdjs.GAME_32OVERCode.GDinputnameObjects2= [];
 gdjs.GAME_32OVERCode.GDinputnameObjects3= [];
+gdjs.GAME_32OVERCode.GDinputnameObjects4= [];
 gdjs.GAME_32OVERCode.GDoutputrankObjects1= [];
 gdjs.GAME_32OVERCode.GDoutputrankObjects2= [];
 gdjs.GAME_32OVERCode.GDoutputrankObjects3= [];
+gdjs.GAME_32OVERCode.GDoutputrankObjects4= [];
 gdjs.GAME_32OVERCode.GDscoreObjects1= [];
 gdjs.GAME_32OVERCode.GDscoreObjects2= [];
 gdjs.GAME_32OVERCode.GDscoreObjects3= [];
+gdjs.GAME_32OVERCode.GDscoreObjects4= [];
 gdjs.GAME_32OVERCode.GDXButtonObjects1= [];
 gdjs.GAME_32OVERCode.GDXButtonObjects2= [];
 gdjs.GAME_32OVERCode.GDXButtonObjects3= [];
+gdjs.GAME_32OVERCode.GDXButtonObjects4= [];
 gdjs.GAME_32OVERCode.GDleaveObjects1= [];
 gdjs.GAME_32OVERCode.GDleaveObjects2= [];
 gdjs.GAME_32OVERCode.GDleaveObjects3= [];
+gdjs.GAME_32OVERCode.GDleaveObjects4= [];
 gdjs.GAME_32OVERCode.GDplayernameObjects1= [];
 gdjs.GAME_32OVERCode.GDplayernameObjects2= [];
 gdjs.GAME_32OVERCode.GDplayernameObjects3= [];
+gdjs.GAME_32OVERCode.GDplayernameObjects4= [];
 
 
-gdjs.GAME_32OVERCode.asyncCallback19119692 = function (runtimeScene, asyncObjectsList) {
-asyncObjectsList.restoreLocalVariablesContainers(gdjs.GAME_32OVERCode.localVariables);
-gdjs.copyArray(runtimeScene.getObjects("playername"), gdjs.GAME_32OVERCode.GDplayernameObjects2);
-{for(var i = 0, len = gdjs.GAME_32OVERCode.GDplayernameObjects2.length ;i < len;++i) {
-    gdjs.GAME_32OVERCode.GDplayernameObjects2[i].hide(false);
-}
-}gdjs.GAME_32OVERCode.localVariables.length = 0;
-}
-gdjs.GAME_32OVERCode.eventsList0 = function(runtimeScene) {
-
-{
-
-
-{
-{
-const asyncObjectsList = new gdjs.LongLivedObjectsList();
-asyncObjectsList.backupLocalVariablesContainers(gdjs.GAME_32OVERCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.network.sendAwaitableAsyncRequest("/postscore", gdjs.evtTools.network.variableStructureToJSON(runtimeScene.getGame().getVariables().getFromIndex(0)), "POST", "application/json", runtimeScene.getScene().getVariables().get("hook"), gdjs.VariablesContainer.badVariable), (runtimeScene) => (gdjs.GAME_32OVERCode.asyncCallback19119692(runtimeScene, asyncObjectsList)));
-}
-}
-
-}
-
-
-};gdjs.GAME_32OVERCode.eventsList1 = function(runtimeScene, asyncObjectsList) {
+gdjs.GAME_32OVERCode.eventsList0 = function(runtimeScene, asyncObjectsList) {
 
 {
 
@@ -72,14 +59,39 @@ let isConditionTrue_0 = false;
 }
 
 
+};gdjs.GAME_32OVERCode.asyncCallback11641900 = function (runtimeScene, asyncObjectsList) {
+asyncObjectsList.restoreLocalVariablesContainers(gdjs.GAME_32OVERCode.localVariables);
+gdjs.copyArray(asyncObjectsList.getObjects("playername"), gdjs.GAME_32OVERCode.GDplayernameObjects3);
+
+{for(var i = 0, len = gdjs.GAME_32OVERCode.GDplayernameObjects3.length ;i < len;++i) {
+    gdjs.GAME_32OVERCode.GDplayernameObjects3[i].hide();
+}
+}
+{ //Subevents
+gdjs.GAME_32OVERCode.eventsList0(runtimeScene, asyncObjectsList);} //End of subevents
+gdjs.GAME_32OVERCode.localVariables.length = 0;
+}
+gdjs.GAME_32OVERCode.eventsList1 = function(runtimeScene, asyncObjectsList) {
+
+{
+
+
+{
+const parentAsyncObjectsList = asyncObjectsList;
+{
+const asyncObjectsList = gdjs.LongLivedObjectsList.from(parentAsyncObjectsList);
+asyncObjectsList.backupLocalVariablesContainers(gdjs.GAME_32OVERCode.localVariables);
+/* Don't save playername as it will be provided by the parent asyncObjectsList. */
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.network.sendAwaitableAsyncRequest("/postscore", gdjs.evtTools.network.variableStructureToJSON(runtimeScene.getGame().getVariables().getFromIndex(0)), "POST", "application/json", runtimeScene.getScene().getVariables().get("hook"), gdjs.VariablesContainer.badVariable), (runtimeScene) => (gdjs.GAME_32OVERCode.asyncCallback11641900(runtimeScene, asyncObjectsList)));
+}
+}
+
+}
+
+
 };gdjs.GAME_32OVERCode.asyncCallback9963140 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.GAME_32OVERCode.localVariables);
-gdjs.copyArray(asyncObjectsList.getObjects("playername"), gdjs.GAME_32OVERCode.GDplayernameObjects2);
 
-{for(var i = 0, len = gdjs.GAME_32OVERCode.GDplayernameObjects2.length ;i < len;++i) {
-    gdjs.GAME_32OVERCode.GDplayernameObjects2[i].hide();
-}
-}
 { //Subevents
 gdjs.GAME_32OVERCode.eventsList1(runtimeScene, asyncObjectsList);} //End of subevents
 gdjs.GAME_32OVERCode.localVariables.length = 0;
@@ -306,15 +318,16 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("playername"), gdjs.GAME_32OVERCode.GDplayernameObjects1);
 gdjs.copyArray(runtimeScene.getObjects("yourscore"), gdjs.GAME_32OVERCode.GDyourscoreObjects1);
 {gdjs.evtTools.sound.playMusic(runtimeScene, "BGM1.mp3", true, 100, 1);
 }{for(var i = 0, len = gdjs.GAME_32OVERCode.GDyourscoreObjects1.length ;i < len;++i) {
     gdjs.GAME_32OVERCode.GDyourscoreObjects1[i].getBehavior("Text").setText("yourscore :" + runtimeScene.getGame().getVariables().getFromIndex(0).getChild("score").getAsString());
 }
+}{for(var i = 0, len = gdjs.GAME_32OVERCode.GDplayernameObjects1.length ;i < len;++i) {
+    gdjs.GAME_32OVERCode.GDplayernameObjects1[i].hide(false);
 }
-{ //Subevents
-gdjs.GAME_32OVERCode.eventsList0(runtimeScene);} //End of subevents
-}
+}}
 
 }
 
@@ -651,71 +664,93 @@ runtimeScene.getOnceTriggers().startNewFrame();
 gdjs.GAME_32OVERCode.GDEND_9595BGObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDEND_9595BGObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDEND_9595BGObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDEND_9595BGObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDBACKObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDBACKObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDBACKObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDBACKObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDGAMEOVERObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDGAMEOVERObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDGAMEOVERObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDGAMEOVERObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDNewTextObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDNewTextObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDNewTextObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDNewTextObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDyourscoreObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDyourscoreObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDyourscoreObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDyourscoreObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDinputnameObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDinputnameObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDinputnameObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDinputnameObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDoutputrankObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDoutputrankObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDoutputrankObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDoutputrankObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDscoreObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDscoreObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDscoreObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDscoreObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDXButtonObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDXButtonObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDXButtonObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDXButtonObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDleaveObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDleaveObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDleaveObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDleaveObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDplayernameObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDplayernameObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDplayernameObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDplayernameObjects4.length = 0;
 
 gdjs.GAME_32OVERCode.eventsList12(runtimeScene);
 gdjs.GAME_32OVERCode.GDEND_9595BGObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDEND_9595BGObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDEND_9595BGObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDEND_9595BGObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDBACKObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDBACKObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDBACKObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDBACKObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDGAMEOVERObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDGAMEOVERObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDGAMEOVERObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDGAMEOVERObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDNewTextObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDNewTextObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDNewTextObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDNewTextObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDyourscoreObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDyourscoreObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDyourscoreObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDyourscoreObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDinputnameObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDinputnameObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDinputnameObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDinputnameObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDoutputrankObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDoutputrankObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDoutputrankObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDoutputrankObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDscoreObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDscoreObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDscoreObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDscoreObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDXButtonObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDXButtonObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDXButtonObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDXButtonObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDleaveObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDleaveObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDleaveObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDleaveObjects4.length = 0;
 gdjs.GAME_32OVERCode.GDplayernameObjects1.length = 0;
 gdjs.GAME_32OVERCode.GDplayernameObjects2.length = 0;
 gdjs.GAME_32OVERCode.GDplayernameObjects3.length = 0;
+gdjs.GAME_32OVERCode.GDplayernameObjects4.length = 0;
 
 
 return;
