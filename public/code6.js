@@ -52,7 +52,7 @@ gdjs.GAME_32OVERCode.eventsList0 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.GAME_32OVERCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.network.sendAwaitableAsyncRequest("/postscore", gdjs.evtTools.network.variableStructureToJSON(runtimeScene.getGame().getVariables().getFromIndex(0)), "POST", "application/json", runtimeScene.getScene().getVariables().getFromIndex(0), gdjs.VariablesContainer.badVariable), (runtimeScene) => (gdjs.GAME_32OVERCode.asyncCallback19119692(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.network.sendAwaitableAsyncRequest("/postscore", gdjs.evtTools.network.variableStructureToJSON(runtimeScene.getGame().getVariables().getFromIndex(0)), "POST", "application/json", runtimeScene.getScene().getVariables().get("hook"), gdjs.VariablesContainer.badVariable), (runtimeScene) => (gdjs.GAME_32OVERCode.asyncCallback19119692(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -636,7 +636,7 @@ let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("outputrank"), gdjs.GAME_32OVERCode.GDoutputrankObjects1);
 {for(var i = 0, len = gdjs.GAME_32OVERCode.GDoutputrankObjects1.length ;i < len;++i) {
-    gdjs.GAME_32OVERCode.GDoutputrankObjects1[i].getBehavior("Text").setText(gdjs.evtTools.network.variableStructureToJSON(runtimeScene.getGame().getVariables().getFromIndex(0)));
+    gdjs.GAME_32OVERCode.GDoutputrankObjects1[i].getBehavior("Text").setText(gdjs.evtTools.network.variableStructureToJSON(runtimeScene.getScene().getVariables().getFromIndex(0)));
 }
 }}
 
