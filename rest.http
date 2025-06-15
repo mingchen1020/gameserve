@@ -1,7 +1,7 @@
-POST http://minggame.onrender.com/ HTTP/1.1
+POST http://127.0.0.1/postscore HTTP/1.1
 content-type: application/json
 
 {
-    "name": "player",
-    "score": 1000
+    "name": "mb",
+    "score": "1000"
 }

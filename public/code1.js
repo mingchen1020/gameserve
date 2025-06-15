@@ -8,6 +8,8 @@ gdjs.DESCRIBECode.GDXButtonObjects1= [];
 gdjs.DESCRIBECode.GDXButtonObjects2= [];
 gdjs.DESCRIBECode.GDleaveObjects1= [];
 gdjs.DESCRIBECode.GDleaveObjects2= [];
+gdjs.DESCRIBECode.GDplayernameObjects1= [];
+gdjs.DESCRIBECode.GDplayernameObjects2= [];
 
 
 gdjs.DESCRIBECode.eventsList0 = function(runtimeScene) {
@@ -60,7 +62,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(18325436);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(18347388);
 }
 }
 if (isConditionTrue_0) {
@@ -81,7 +83,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.input.anyKeyPressed(runtimeScene);
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(18326204);
+{isConditionTrue_0 = runtimeScene.getOnceTriggers().triggerOnce(18348156);
 }
 }
 if (isConditionTrue_0) {
@@ -152,6 +154,8 @@ gdjs.DESCRIBECode.GDXButtonObjects1.length = 0;
 gdjs.DESCRIBECode.GDXButtonObjects2.length = 0;
 gdjs.DESCRIBECode.GDleaveObjects1.length = 0;
 gdjs.DESCRIBECode.GDleaveObjects2.length = 0;
+gdjs.DESCRIBECode.GDplayernameObjects1.length = 0;
+gdjs.DESCRIBECode.GDplayernameObjects2.length = 0;
 
 gdjs.DESCRIBECode.eventsList0(runtimeScene);
 gdjs.DESCRIBECode.GDDESCRIBEPICTUREObjects1.length = 0;
@@ -162,6 +166,8 @@ gdjs.DESCRIBECode.GDXButtonObjects1.length = 0;
 gdjs.DESCRIBECode.GDXButtonObjects2.length = 0;
 gdjs.DESCRIBECode.GDleaveObjects1.length = 0;
 gdjs.DESCRIBECode.GDleaveObjects2.length = 0;
+gdjs.DESCRIBECode.GDplayernameObjects1.length = 0;
+gdjs.DESCRIBECode.GDplayernameObjects2.length = 0;
 
 
 return;

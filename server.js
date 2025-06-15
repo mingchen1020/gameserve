@@ -45,8 +45,6 @@ server.post("/postscore", (req, res) => {
          }
       })
    });
-
-   // res.send([{name:"MD", rank:1},{name:"Jhon",rank:2}]);
 });
 
 server.listen(80);
